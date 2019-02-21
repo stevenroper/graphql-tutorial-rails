@@ -1,5 +1,5 @@
 module Mutations
-  class CreateLink < Mutations::BaseMutation
+  class CreateLink < BaseMutation
 
     argument :description, String, required: true
     argument :url, String, required: true
