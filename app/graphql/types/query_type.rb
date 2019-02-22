@@ -1,10 +1,17 @@
 module Types
   class QueryType < BaseObject
     field :all_links, function: Resolvers::LinksSearch
-    field :all_accounts, [Types::AccountType], null: false
+    field :accounts, [Types::AccountType], null: false
+    field :account, Types::AccountType, null: false do
+      argument :id, ID, required: true
+    end
 
-    def all_accounts
+    def accounts
       Account.all
+    end
+
+    def account(id:)
+      Account.find(id)
     end
   end
 end
