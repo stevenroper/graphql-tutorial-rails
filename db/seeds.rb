@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |num|
+  Account.create!(
+    account_number: 201900000 + num,
+    agreement_date: Time.new,
+    open: num % 2 > 0
+  )
+end

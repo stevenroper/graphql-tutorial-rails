@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number: 1
+  agreement_date: 
+  open: false
+
+two:
+  account_number: 1
+  agreement_date: 
+  open: false
